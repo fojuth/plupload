@@ -16,13 +16,12 @@ class TwigExtension extends BaseExtension {
   }
 
   /**
-   * Create a new extension instance. Registers Twig undefined function callback.
-   *
    * @param Illuminate\Foundation\Application $app
    * @param Twig_Environment                  $twig
    */
   public function __construct(Application $app, Twig_Environment $twig) {
     parent::__construct($app, $twig);
+    
     $this->registerTwigFunctions();
   }
 
