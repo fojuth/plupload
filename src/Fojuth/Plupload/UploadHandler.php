@@ -17,7 +17,7 @@ class UploadHandler implements \Fojuth\Plupload\UploadHandlerInterface {
     $result = $file->move(\Config::get('plupload::plupload.upload_dir'), $file->getClientOriginalName());
 
     // Return the result of the upload
-    return $this->respond(array('OK' => (bool) $result));
+    return $this->respond(array('OK' => ($result) ? 1 : 0));
   }
   
   /**
