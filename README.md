@@ -6,14 +6,14 @@ A simple Laravel 4 implementation of [Plupload][1]. Makes uploading multiple fil
 Template engine support
 -----------------------
 
-The package currently supports only Twig, but Blade support will be added ASAP.
+The package supports Twig and Blade templating engines.
 
 Installation
 ------------
 
 1. Install the package using [Composer].
 2. Add `'Fojuth\Plupload\PluploadServiceProvider'` to the provider section in `app/config/app.php`.
-3. Add `'Fojuth\Plupload\TwigExtension'` to Twig extensions in `app/config/packages/rcrowe/twigbridge/config.php`.
+3. (Twig only) Add `'Fojuth\Plupload\TwigExtension'` to Twig extensions in `app/config/packages/rcrowe/twigbridge/config.php`.
 4. Publish the package's assets using this command: `php artisan asset:publish fojuth/plupload`.
 5. You may wish to publish the config files, to override them: `php artisan config:publish fojuth/plupload`.
 
@@ -37,7 +37,20 @@ You can set multiple uploaders, if needed.
 ```
 
 ### Blade
-Soon.
+
+- Basic upload interface:
+
+```
+@plupload()
+```
+
+You can set multiple uploaders, if needed.
+
+- Use a custom view, name the "browse" button (e.g. for JS) and specify the prefix for all the uploader's DOM elements:
+
+```
+@plupload($view_path, 'mah-button', 'uploader-1')
+```
 
 Support
 -------
