@@ -11,7 +11,9 @@
   "require": {
     "php": ">=5.3.0",
     "illuminate/support": "4.0.x",
-    "rcrowe/twigbridge": "0.4.*"
+  },
+  "suggest": {
+    "rcrowe/twigbridge": "Required for Twig support."
   },
   "autoload": {
     "psr-0": {
