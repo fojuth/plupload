@@ -8,8 +8,15 @@ interface UploadHandlerInterface {
   /**
    * The main upload method.
    * 
-   * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file
+   * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file Uploaded file instance.
    */
   public function upload(\Symfony\Component\HttpFoundation\File\UploadedFile $file);
+  
+  /**
+   * Method returning the response.
+   * 
+   * @param array $response The response to be returned.
+   */
+  public function respond(array $response);
   
 }
