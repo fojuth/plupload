@@ -1,0 +1,22 @@
+{
+  "name": "fojuth/plupload",
+  "description": "A Laravel 4 implementation of Plupload (http://www.plupload.com/).",
+  "keywords": ["laravel", "plupload", "file upload"],
+  "authors": [
+    {
+      "name": "Kamil Fojuth",
+      "email": "fojuth@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "illuminate/support": "4.0.x",
+    "rcrowe/twigbridge": "0.4.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Fojuth\\Plupload": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
