@@ -7,6 +7,4 @@ interface UploadHandlerInterface {
   
   public function upload(\Symfony\Component\HttpFoundation\File\UploadedFile $file);
   
-  //public function move();
-  
 }
