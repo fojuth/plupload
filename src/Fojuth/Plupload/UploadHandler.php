@@ -25,6 +25,7 @@ class UploadHandler implements \Fojuth\Plupload\UploadHandlerInterface {
    * 
    * @param array $response The response to be returned.
    * @return string
+   * @throws \InvalidArgumentException Thrown when the response is empty.
    */
   public function respond(array $response) {
     
