@@ -24,7 +24,10 @@ return array(
    * Target upload directory.
    */
   'upload_dir' => 'uploads',
-    
+   
+   /**
+    * Max upload size.
+    */
   'max_file_size' => '5mb',
 
 );
