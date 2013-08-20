@@ -19,4 +19,11 @@ interface UploadHandlerInterface {
    */
   public function respond(array $response);
   
+  /**
+   * Register the parameters passed to the gate controller.
+   * 
+   * @param array $params
+   */
+  public function registerParams(array $params);
+  
 }
