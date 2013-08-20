@@ -6,6 +6,13 @@
 class UploadHandler implements \Fojuth\Plupload\UploadHandlerInterface {
   
   /**
+   * Parameters passed by the gate controller.
+   *
+   * @var type 
+   */
+  protected $params;
+  
+  /**
    * The main upload method.
    * 
    * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file Uploaded file instance.
@@ -35,6 +42,15 @@ class UploadHandler implements \Fojuth\Plupload\UploadHandlerInterface {
     }
     
     return \Response::json($response);
+  }
+  
+  /**
+   * Register the params passed by the gate controller (like the GET params).
+   * 
+   * @param array $params
+   */
+  public function registerParams(array $params) {
+    $this->params = $params;
   }
   
 }
