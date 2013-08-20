@@ -23,6 +23,9 @@ class PluploadController extends \Illuminate\Routing\Controllers\Controller {
       throw new \LogicException('The upload handler must implement the \Fojuth\Plupload\UploadHandlerInterface interface.');
     }
     
+    // We register the GET params
+    $this->upload_handler->registerParams($_GET);
+    
     // All looks fine, we start the upload
     return $this->upload_handler->upload(\Input::file('file'));
   }
