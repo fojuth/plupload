@@ -29,7 +29,7 @@ class TwigExtension extends BaseExtension {
    * Registers the Twig functions.
    */
   private function registerTwigFunctions() {
-    $this->twig->addFunction('plupload', new \Twig_SimpleFunction('plupload', function($view = null, $browse_button = null, $prefix = null){
+    $this->twig->addFunction('plupload', new \Twig_SimpleFunction('plupload', function($view = null, $browse_button = null, $prefix = null, $additional_data = array()){
       $view = (true === is_null($view)) ? \Config::get('plupload::plupload.view') : $view;
       $prefix = (true === is_null($prefix)) ? 'plupload_'.uniqid() : $prefix;
       $browse_button = (true === is_null($browse_button)) ? $prefix.'_browse' : $browse_button;
@@ -40,6 +40,7 @@ class TwigExtension extends BaseExtension {
         'prefix' => $prefix,
         'handler_gate' => \Config::get('plupload::plupload.upload_handler_gate'),
         'max_file_size' => \Config::get('plupload::plupload.max_file_size'),
+        'additional_data' => $additional_data,
       ));
     }));
   }
