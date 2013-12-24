@@ -1,11 +1,13 @@
 <?php namespace Fojuth\Plupload\Controllers;
 
+ use \Illuminate\Routing\Controller;
+
 /**
  * Plupload gate.
  * 
  * Works as a mediator initiating the upload process.
  */
-class PluploadController extends \Illuminate\Routing\Controllers\Controller {
+class PluploadController extends Controller {
   
   protected $upload_handler;
   
