@@ -1,7 +1,7 @@
-Plupload for Laravel 4
+Plupload for Laravel 5
 ======================
 
-A simple Laravel 4 implementation of [Plupload][1]. Makes uploading multiple files easy.
+A simple Laravel 5 implementation of [Plupload][1]. Makes uploading multiple files easy.
 
 Template engine support
 -----------------------
