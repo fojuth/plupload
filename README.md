@@ -13,9 +13,9 @@ Installation
 
 1. Install the package using [Composer].
 2. Add `'Fojuth\Plupload\PluploadServiceProvider'` to the provider section in `app/config/app.php`.
-3. (Twig only) Add `'Fojuth\Plupload\TwigExtension'` to Twig extensions in `app/config/packages/rcrowe/twigbridge/config.php`.
-4. Publish the package's assets using this command: `php artisan asset:publish fojuth/plupload`.
-5. You may wish to publish the config files, to override them: `php artisan config:publish fojuth/plupload`.
+3. (Twig only) Add `'Fojuth\Plupload\TwigExtension'` to Twig extensions in `app/config/packages/rcrowe/twigbridge/extensions.php`.
+4. Publish the package's assets using this command: `php artisan publish:asset fojuth/plupload`.
+5. You may wish to publish the config files, to override them: `php artisan publish:config fojuth/plupload`.
 
 Usage
 -----
